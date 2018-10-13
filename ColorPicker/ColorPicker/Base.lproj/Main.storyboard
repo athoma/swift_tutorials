@@ -13,16 +13,16 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Color_Picker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColorPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cd-Sn-WDp">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sew-f3-zpP">
                                 <rect key="frame" x="0.0" y="451" width="375" height="216"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnC-88-tLQ">
-                                <rect key="frame" x="166" y="390" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYI-fa-QDQ">
+                                <rect key="frame" x="166" y="394" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -30,17 +30,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5Cd-Sn-WDp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="95R-qV-ipR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Cd-Sn-WDp" secondAttribute="bottom" id="G7E-zn-HmC"/>
-                            <constraint firstItem="fnC-88-tLQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TXq-Oq-WDi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Cd-Sn-WDp" secondAttribute="trailing" id="bmv-nV-d47"/>
-                            <constraint firstItem="5Cd-Sn-WDp" firstAttribute="top" secondItem="fnC-88-tLQ" secondAttribute="bottom" constant="40" id="g3o-MJ-9ho"/>
+                            <constraint firstItem="sew-f3-zpP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vrn-tZ-FzE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sew-f3-zpP" secondAttribute="bottom" id="dk7-R5-k6m"/>
+                            <constraint firstItem="sew-f3-zpP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f2N-gO-HCd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sew-f3-zpP" secondAttribute="trailing" id="fyY-RP-nWh"/>
+                            <constraint firstItem="sew-f3-zpP" firstAttribute="top" secondItem="mYI-fa-QDQ" secondAttribute="bottom" constant="36" id="rJ8-6m-pff"/>
+                            <constraint firstItem="mYI-fa-QDQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vxt-G4-8gA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="colorLabel" destination="fnC-88-tLQ" id="gu5-71-lQZ"/>
-                        <outlet property="pickerView" destination="5Cd-Sn-WDp" id="qCJ-Jp-rw4"/>
+                        <outlet property="colorLabel" destination="mYI-fa-QDQ" id="m8x-Pl-Eao"/>
+                        <outlet property="colorPickerView" destination="sew-f3-zpP" id="Kdf-5p-ljQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -1,15 +1,15 @@
 //
-//  Color_PickerTests.swift
-//  Color PickerTests
+//  ColorPickerTests.swift
+//  ColorPickerTests
 //
-//  Created by Adam Thoma-Perry on 10/8/18.
+//  Created by Adam Thoma-Perry on 10/13/18.
 //  Copyright © 2018 Thoma-Perry, Adam. All rights reserved.
 //
 
 import XCTest
-@testable import Color_Picker
+@testable import ColorPicker
 
-class Color_PickerTests: XCTestCase {
+class ColorPickerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
