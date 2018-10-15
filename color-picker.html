@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<head>
+	<title>Color Picker</title>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!--<link rel="stylesheet" type="text/css" href="./styles-2.css">-->
+	<link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon">
+	<style>
+	html body {
+			background: linear-gradient(37deg, #8972DD, #293CAE);
+			background-repeat: no-repeat;
+			font-family: 'Quicksand' ,sans-serif !important;
+	}
+	h1 {
+			margin-top: 20px;
+			text-align: center;
+			color:white;
+	}
+	p {font-size: 140%;}
+	iframe {
+		border: 1px solid #000;
+		border-radius: 2px;
+		overflow: hidden;
+	}
+	code {
+			border: 1px solid #DDD;
+	}
+	pre > code {
+			border: none;
+	}
+	.navbar-fixed-left {
+		width: 140px;
+		position: fixed;
+		border-radius: 0;
+		height: 100%;
+		background-color: #0099ff;
+		border: none;
+	}
+	.navbar-fixed-left .navbar-nav > li {
+		float: none;
+		width: 139px;
+	}
+	.navbar-fixed-left + .container {
+		padding-left: 160px;
+	}
+	.white {
+			color: white;
+	}
+	.navbar-inverse .navbar-brand {
+			color: black;
+	}
+	.navbar-inverse .navbar-brand:hover,
+	.navbar-inverse .navbar-brand:focus {
+			color: black;
+	}
+	.navbar .nav > li > a {
+			color:  white;
+	}
+	.navbar .nav > li > a:hover {
+			color:  black;
+	}
+	.steps {
+			width: 485px;
+			margin: 15px auto;
+			text-align: center;
+			background-color: rgba(0, 0, 0, 0.6);
+			border-radius: 6px;
+			padding: 15px;
+			color:white;
+	}
+	.sectionhead {
+			background-color: #7EA9C9;
+			color: white;
+			height: 50px;
+			padding-left: 20px;
+	}
+	.row {
+			margin-bottom: 20px;
+	}
+	#submit {
+			width: 485px;
+			margin: auto;
+	}
+	#g-input {
+			margin-top: 25px;
+			margin-left: 5px;
+			width: 100%;
+	}
+    #frame { width: 605px; height: 400px; margin-bottom: -75px;}
+    #frame {
+        -ms-zoom: 0.75;
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.75);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.75);
+        -webkit-transform-origin: 0 0;
+    }
+	</style>
+</head>
+
+	<body>
+
+		<!---->
+        <!---->
+        <!--NAVBAR-->
+        <!---->
+        <!---->
+        <div class="navbar navbar-inverse navbar-fixed-left" style="width: 165px">
+        	<span class="navbar-brand white">Need Help?</span>
+            <ul class="nav navbar-nav">
+                <li><a href="https://swift.org/documentation/#the-swift-programming-language" target="_blank">Swift Documentation</a></li>
+                <!--<li><a href="html-guide.html" target="_blank">Intro to HTML</a></li>
+                <li><a href="css-guide.html" target="_blank">Intro to CSS</a></li>
+                <li><a href="woof-to-js.html" target="_blank">From Woof to JavaScript</a></li>
+                <li><a href="reference-guide.html" target="_blank">Web Reference Guide</a></li>-->
+                <li><form method="get" action="https://www.google.com/search" target="_blank"><input id="g-input" type="text" name="q"  placeholder="Search Google"></form></li>
+            </ul>
+        </div>
+
+		<div class="container">
+
+		<h1>Color Picker</h1>
+
+		<div class="steps">
+			<p>In this project you'll learn about using the <br>Picker View and Structs</p>
+			<p>Check out the <a href="https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html">Structs</a> and <a href="https://developer.apple.com/documentation/uikit/uipickerview">Picker View</a> documentation if you get stuck.</p>
+			<image height=40% width=40% src="ColorPickerCyan.png"></image>
+			<image height=40% width=40% src="ColorPickerRed.png"></image>
+		</div>
+
+		<div class="steps">
+			<p>1. Open up a new <a href="https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/BBUI_singleviewapp_template_2x.png">Single View</a> application</p>
+			<p>In the StoryBoard, use the search in the bottom right to <a href="https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/BuildABasicUI.html#//apple_ref/doc/uid/TP40015214-CH5-SW1">add</a> a Picker View and a Label. You may place them wherever you'd like, but make sure that they are <a href="https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/BBUI_AL_stackconstraints_2x.png">Horizontally Aligned</a>, and have a set <a href="https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/BBUI_AL_textfieldconstraint_2x.png">Vertical Spacing</a> between them.</p>
+		</div>
+
+		<div class="steps">
+			<p>2. Use the <a href="https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/assistant_editor_toggle_2x.png">Assistant Editor</a> to link your Picker View and Label elements to your ViewController as <a href="https://docs.swift.org/swift-book/LanguageGuide/Properties.html">Global</a> elements.</p>
+		</div>
+
+		<div class="steps">
+			<p>3. Create a new <a href="https://stackoverflow.com/questions/40072379/how-to-create-new-swift-file">Swift File</a>, and inside it create a Struct called "Colors" that has contains a <a href="https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html">String Constant</a> "colorName", and a <a href="https://developer.apple.com/documentation/uikit/uicolor">UIColor Constant</a> "backgroundColor". Save the file, and return to your ViewController.</p>
+		</div>
+
+		<div class="steps">
+			<p>4. Create a global variable called "colorsArray", <a href="https://docs.swift.org/swift-book/LanguageGuide/TypeCasting.html">typecast</a> it to be an array of "Colors", and set it equal to an empty array. Create a <a href="https://docs.swift.org/swift-book/LanguageGuide/Functions.html">function</a> called "loadColors" that returns nothing and takes in no parameters.</p>
+		</div>
+
+		<div class="steps">
+			<p>5. Inside the loadColors function, <a href="https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html">add</a> at least three colors to our colorsArray. Then initialize loadColors inside viewDidLoad.</p>
+		</div>
+
+		<div class="steps">
+			<p>6. Now we have an array with all of our colors, but we still need to link them to our Picker View. For this, we will need to use some of the Picker View functions which can be found <a href="https://developer.apple.com/documentation/uikit/uipickerview">here</a> and <a href="https://developer.apple.com/documentation/uikit/uipickerviewdelegate">here</a>.</p>
+			<br>
+			<p>In this project we will need:</p>
+			<image src="numberOfComponents.png"></image>
+			<p>To choose how many columns our Picker View has</p>
+			<br>
+			<image src="numberOfRowsInComponent.png" width=95%></image>
+			<p>To choose how many rows our Picker View has</p>
+			<br>
+			<image src="titleForRow.png" width=95% ></image>
+			<p>So that we can rename each row of the<br>Picker View</p>
+			<br>
+			<image src="didSelectRow.png" width=95%></image>
+			<p>So that we can control what happens when a specific row is selected</p>
+		</div>
+
+		<div class="steps">
+			<p>7. For now, we only want one column in our Picker View, so have numberOfComponents return 1.</p>
+			<p>Inside numberOfRowsInComponent, return the number of elements that we have in our colorsArray without using an actual number.</p>
+		</div>
+
+		<div class="steps">
+			<p>8. Inside titleForRow, we are going to use the <code>row: Int</code> property to return each of our colorNames. So just as you would select a specific element of your array with an integer, use "row" in place of that integer to return all of the colorNames in our colorsArray.</p>
+		</div>
+
+		<div class="steps">
+			<p>9. In didSelectRow, use that same <code>row: Int</code> property to change the color of our background when selected (you may need to look up how to change the background color). Also change the text of our label to equal the colorName of whatever color is selected.</p>
+		</div>
+
+		<div class="steps">
+			<p>10. In viewDidLoad, set the delegate and dataSource of the Picker View to "self". Then preload the color of the background to equal the first colorBackground in our array, and set the text in the label to equal the first colorName. </p>
+		</div>
+
+		<div class="steps">
+			<p>Optional Challange: Have numberOfComponents return two instead of one. Have the background color change when the first component is changed, and make the label text change when the second component changes.</p>
+		</div>
+
+		</div>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-86847686-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+
+
+
+	</body>
+
+</html>
